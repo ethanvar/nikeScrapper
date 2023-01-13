@@ -21,12 +21,8 @@ def findProducts():
 
     soupListTwo = soup.findAll(attrs={"ncss-brand u-uppercase text-color-grey mb-1-sm mb0-md mb-3-lg fs12-sm fs14-md"})
 
-    #for i in range(0, len(soupList)):
-     #   #print(soupList[i].get_text())
-      #  productList.append(soupList[i].get_text(strip=True))
 
     for i in range(0, len(soupListOne)):
-        #print(soupList[i].get_text())
         productList.append(soupListTwo[i].get_text(strip=True)+" "+soupListOne[i].get_text(strip=True))
     
 
@@ -135,14 +131,4 @@ def main():
             writeToFile(newProds, "shoes.txt")    
             print(newProds)
 
-
-
-#pczkevcxblhgpasd
-#products = findProducts()
-#productImgs = findProductsImgs() 
-#writeToFile(products, "shoes.txt")
-#print(compareInv("shoes.txt"))
-#products = findProducts()
-#writeToFile(products, "shoes.txt")
-#findProducts()
 main()
